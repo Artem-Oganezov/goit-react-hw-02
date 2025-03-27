@@ -11,7 +11,11 @@ function App() {
     if (data !== null) {
       return data;
     }
-    return {};
+    return {
+      good: 0,
+      neutral: 0,
+      bad: 0,
+    };
   });
 
   function saveToLS(key, value) {
@@ -34,10 +38,7 @@ function App() {
   }, [values]);
 
   const totalFeedback = values.good + values.neutral + values.bad;
-
-  let totalPositive = Math.round(
-    ((values.good + values.neutral) / totalFeedback) * 100
-  );
+  let totalPositive = Math.round((values.good / totalFeedback) * 100);
 
   const updateFeedback = dataObj => {
     setValues({
