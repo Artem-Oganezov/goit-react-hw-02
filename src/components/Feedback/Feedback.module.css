@@ -1,0 +1,21 @@
+.box_feedback {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: greenyellow;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.item {
+  padding: 5px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}

@@ -1,0 +1,131 @@
+.btn_style {
+  width: 160px;
+  height: 50px;
+  background-color: #0be50b;
+  color: black;
+  padding: 0;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  animation: pulse-green 1.5s infinite;
+}
+.btn_style.blue {
+  background-color: rgb(13, 13, 248);
+  animation: pulse-blue 1.5s infinite;
+}
+
+.btn_style.yellow {
+  background-color: yellow;
+  animation: pulse-yellow 1.5s infinite;
+}
+
+@keyframes pulse-yellow {
+  0% {
+    box-shadow: 0 0 10px rgb(223, 243, 71, 1);
+    filter: brightness(1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(223, 243, 71, 1), 0 0 30px rgba(223, 243, 71, 1);
+    filter: brightness(1.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(223, 243, 71, 1);
+    filter: brightness(1);
+  }
+}
+
+@keyframes pulse-blue {
+  0% {
+    box-shadow: 0 0 10px rgb(36, 94, 241);
+    filter: brightness(1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(36, 94, 243, 1), 0 0 30px rgba(36, 94, 243, 1);
+    filter: brightness(1.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(36, 94, 243, 1);
+    filter: brightness(1);
+  }
+}
+
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 10px rgb(9, 255, 0, 1);
+    filter: brightness(1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(9, 255, 0, 1), 0 0 30px rgba(9, 255, 0, 1);
+    filter: brightness(1.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(9, 255, 0, 1);
+    filter: brightness(1);
+  }
+}
+
+.btn_style:hover {
+  background-color: #0be50b;
+}
+.btn_style.blue:hover {
+  background-color: rgb(31, 98, 240);
+}
+.btn_style.yellow:hover {
+  background-color: rgb(195, 240, 31);
+}
+.btn_style.red:hover {
+  background-color: rgb(252, 47, 47);
+}
+
+.btn_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  background: linear-gradient(180deg, #000 44.1%, #250000 100%);
+  gap: 25px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.btn_box .btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  color: black;
+  background-color: red;
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 1);
+    filter: brightness(1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 30px rgba(255, 0, 0, 1);
+    filter: brightness(1.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 1);
+    filter: brightness(1);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn_box {
+    flex-direction: row;
+    padding: 25px;
+    height: 150px;
+    justify-content: space-between;
+    gap: 25px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+}
